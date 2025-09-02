@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .content-auto {
+    content-visibility: auto;
+  }
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  .btn-primary {
+    @apply bg-secondary hover:bg-secondary/90 text-white font-medium py-3 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1;
+  }
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-tertiary border border-tertiary font-medium py-3 px-6 rounded-full transition-all duration-300 shadow-sm hover:shadow-md;
+  }
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  .section-title {
+    @apply text-[clamp(2rem,5vw,3rem)] font-bold text-dark mb-4 text-center;
+  }
+  .section-subtitle {
+    @apply text-[clamp(1rem,2vw,1.25rem)] text-gray-600 max-w-3xl mx-auto text-center mb-12;
+  }
+  .badge {
+    @apply absolute top-3 left-3 px-2 py-1 text-xs font-semibold rounded-full;
+  }
+  .cart-count {
+    @apply absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center;
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.toast {
+  z-index: 9999;
+}
